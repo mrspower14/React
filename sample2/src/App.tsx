@@ -6,14 +6,16 @@ import EventBasic from './component/EventBasic';
 //import PropsTest from "./component/PropsTest";
 //import SayHello from "./component/SayHello";
 //import Library from './component/Library';
+import LoginControl from './component/LoginControl';
 
 function App() {
 
   return (
     <>
-      <EventBasic type="date"/>
+      {/* <EventBasic type="date"/>
       <EventBasic type="time"/>
-      <EventBasic type="all"/>
+      <EventBasic type="all"/> */}
+      <LoginControl/>
     </>
   )
 }

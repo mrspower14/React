@@ -1,17 +1,23 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
 import './TodoEditor.css';
+import {TodoDispatchContext} from '../TodoContext';
 
-interface TodoEditorProps {
-    onCreate:(content: string) => void;
-}
+// useContext 적용 전
+// interface TodoEditorProps {
+//     onCreate:(content: string) => void;
+// }
 
-function TodoEditor({onCreate}: TodoEditorProps) {
+//function TodoEditor({onCreate}: TodoEditorProps) {
+
+// useContext 적용 후
+function TodoEditor() {
+    // TodoContext 에서 onCreate 가져오기 
+    const { onCreate } = useContext(TodoDispatchContext);
     const [content, setContent] = useState<string>('');
     const inputRef = useRef<HTMLInputElement>(null);
 
     // 입력 content 값 저장 useState
     const onChangeContent = (e:React.ChangeEvent<HTMLInputElement>) => {
-
         setContent(e.target.value);
     }
 

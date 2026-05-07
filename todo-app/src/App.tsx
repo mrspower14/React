@@ -128,9 +128,8 @@ function App() {
   }, []);
 
   const dispatches = useMemo( 
-    () =>  ({onCreate, onUpdate, onDelete}), 
-    [onCreate, onUpdate, onDelete]
-  );
+    () =>  ({onCreate, onUpdate, onDelete}
+    ), [onCreate, onUpdate, onDelete]);
 
   return (
     <div className="App">

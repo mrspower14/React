@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // const router = createBrowserRouter([
 //   {path: "/", element: (<><Header/><Main/></>)},
-//   {path: "/product/*", element: (<><Header/><Product /></>)},
+//   {path: "/product/:id", element: (<><Header/><Product /></>)},
 //   {path: "*", element: (<><Header/><NotFound /></>)}
 // ])
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {index: true, element: <Main />},
-      {path: "product/*", element: <Product />},
+      {path: "product/:id", element: <Product />},
       // {path: "*", element: <NotFound />}
     ],
   },
